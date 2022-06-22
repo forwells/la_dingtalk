@@ -25,13 +25,8 @@ class Main
         return $this->mobile_search_url . '?access_token=' . $this->token;
     }
 
-    public function markdown($title = '', $text = '')
+    public function link($link = '', $title = '', $text = '', $user_phones = [])
     {
-        $user_phones = [
-            18624988212,
-            // 15858251814,
-            // 18867142017,
-        ];
         $user_ids = [];
         array_map(function ($mobile) use (&$user_ids) {
             $response = Http::post($this->mobile_search_url(), [
@@ -48,7 +43,7 @@ class Main
         $msg = [
             "msgtype" => "link",
             "link" => [
-                "messageUrl" => "https://bus.hidream.net",
+                "messageUrl" => $link,
                 "picUrl" => "@lALOACZwe2Rk",
                 "title" => $title,
                 "text" => $text
