@@ -1,0 +1,33 @@
+{
+    "name": "buoor/dingtalk",
+    "description": "Laravel dingtalk package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Buoor\\Dingtalk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Buoor\\Dingtalk\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yadan",
+            "email": "rpcfolo@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "laravel/framework": "^9.11"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Buoor\\Dingtalk\\DingtalkServiceProvider"
+            ]
+        }
+    }
+}
